@@ -5,14 +5,28 @@ import About from "../components/About.astro";
 import Clients from "../components/Clients.astro";
 import Features from "../components/Features.astro";
 import Services from "../components/Services.astro";
+<<<<<<< HEAD
 import Contact from "../components/Contact.jsx";
+=======
+import Contact from "../components/Contact.astro";
+import CTA from "../components/CTA.astro";
+import Counts from "../components/Counts.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Team from "../components/Team.astro";
+>>>>>>> 5d9b0dde408bc33f58a1b5dd6a21be02cc8ab72d
 ---
 
 <Layout title="Welcome to Astro.">
   <Hero />
+  <main id="main">
   <About />
   <Clients/>
   <Features/>
 <Services/>
-<Contact/>
+<CTA/>
+<Counts/>
+<Testimonials/>
+<Team/>
+
+<Contact/></main>
 </Layout>
