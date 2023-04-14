@@ -12,11 +12,10 @@ import Counts from "../components/Counts.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Team from "../components/Team.astro";
 //const Lang=localStorage.getItem('lang')|| 'en'
-const Lang =
-  localStorage.getItem("Lang") || localStorage.setItem("Lang", "en");
+const Lang = localStorage.getItem("Lang") || localStorage.setItem("Lang", "en");
 ---
 
-<Layout title={Lang=='en'?'welcom':'bonjour'}>
+<Layout title={Lang == "en" ? "welcom" : "bonjour"}>
   <Hero />
   <main id="main">
     <About />

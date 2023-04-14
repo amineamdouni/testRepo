@@ -36,8 +36,8 @@ const Lang =
     <section id="contact" className="contact">
       <form ref={form} className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>{Lang == "en" ? "Contact" : "Contact"}</h2>
+          <p>{Lang == "en" ? "Contact us" : "CONTACTEZ-NOUS"}</p>
         </div>
 
         <div>

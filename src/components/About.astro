@@ -2,27 +2,67 @@
 const Lang =
   localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
 ---
+
 <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>{Lang=='en'?'Our Mission We Do Things Diffrently.':'Notre mission Nous faisons les choses différemment.'}</h3>
-            <p class="fst-italic">
-              {Lang=='en'?'We specialize in developing innovative web and mobile apps that meet your unique needs. Our team of expert developers is committed to providing you with high-quality, secure solutions that are tailored to your business objectives.':"Nous sommes spécialisés dans le développement d'applications web et mobiles innovantes qui répondent à vos besoins uniques. Notre équipe de développeurs experts s'engage à vous fournir des solutions de haute qualité, sécurisées et adaptées à vos objectifs commerciaux."}
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i>{Lang=='en'?'Exceptional talent that seamlessly integrates with your existing team.':"Des talents exceptionnels qui s'intègrent parfaitement à votre équipe existante."} </li>
-              <li><i class="ri-check-double-line"></i>{Lang=='en'?'Software engineers are dedicated to augmenting your team, tools, and processes to provide you with the support you need to succeed.':"Les ingénieurs logiciels ont pour mission de renforcer votre équipe, vos outils et vos processus afin de vous apporter le soutien dont vous avez besoin pour réussir."}</li>
-              <li><i class="ri-check-double-line"></i>{Lang=='en'?'Our experts collaborate closely with you to define people and software engineering best practices that help your team achieve outstanding results.':"Nos experts collaborent étroitement avec vous pour définir les meilleures pratiques en matière de ressources humaines et d'ingénierie logicielle qui aideront votre équipe à obtenir des résultats exceptionnels."}</li>
-            </ul>
-            <p>{Lang=='en'?" With our commitment to excellence and dedication to customer satisfaction, you can be confident that we'll provide you with the tools you need to achieve your business goals.":"Grâce à notre engagement en faveur de l'excellence et de la satisfaction du client, vous pouvez être certain que nous vous fournirons les outils dont vous avez besoin pour atteindre vos objectifs commerciaux."}
-                          </p>
-          </div>
-        </div>
-
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div
+        class="col-lg-6 order-1 order-lg-2"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      >
+        <img src="assets/img/about.jpg" class="img-fluid" alt="" />
       </div>
-    </section>
+      <div
+        class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        <h3>
+          {
+            Lang == "en"
+              ? "Our Mission We Do Things Diffrently."
+              : "Notre mission Nous faisons les choses différemment."
+          }
+        </h3>
+        <p class="fst-italic">
+          {
+            Lang == "en"
+              ? "We specialize in developing innovative web and mobile apps that meet your unique needs. Our team of expert developers is committed to providing you with high-quality, secure solutions that are tailored to your business objectives."
+              : "Nous sommes spécialisés dans le développement d'applications web et mobiles innovantes qui répondent à vos besoins uniques. Notre équipe de développeurs experts s'engage à vous fournir des solutions de haute qualité, sécurisées et adaptées à vos objectifs commerciaux."
+          }
+        </p>
+        <ul>
+          <li>
+            <i class="ri-check-double-line"></i>{
+              Lang == "en"
+                ? "Exceptional talent that seamlessly integrates with your existing team."
+                : "Des talents exceptionnels qui s'intègrent parfaitement à votre équipe existante."
+            }
+          </li>
+          <li>
+            <i class="ri-check-double-line"></i>{
+              Lang == "en"
+                ? "Software engineers are dedicated to augmenting your team, tools, and processes to provide you with the support you need to succeed."
+                : "Les ingénieurs logiciels ont pour mission de renforcer votre équipe, vos outils et vos processus afin de vous apporter le soutien dont vous avez besoin pour réussir."
+            }
+          </li>
+          <li>
+            <i class="ri-check-double-line"></i>{
+              Lang == "en"
+                ? "Our experts collaborate closely with you to define people and software engineering best practices that help your team achieve outstanding results."
+                : "Nos experts collaborent étroitement avec vous pour définir les meilleures pratiques en matière de ressources humaines et d'ingénierie logicielle qui aideront votre équipe à obtenir des résultats exceptionnels."
+            }
+          </li>
+        </ul>
+        <p>
+          {
+            Lang == "en"
+              ? " With our commitment to excellence and dedication to customer satisfaction, you can be confident that we'll provide you with the tools you need to achieve your business goals."
+              : "Grâce à notre engagement en faveur de l'excellence et de la satisfaction du client, vous pouvez être certain que nous vous fournirons les outils dont vous avez besoin pour atteindre vos objectifs commerciaux."
+          }
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
