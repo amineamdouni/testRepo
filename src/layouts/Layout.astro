@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,28 +8,122 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Gp Bootstrap Template - Index</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js" is:inline
+    ></script>
+    <script src="assets/vendor/aos/aos.js" is:inline></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" is:inline
+    ></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js" is:inline
+    ></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" is:inline
+    ></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" is:inline></script>
+    <script src="assets/vendor/php-email-form/validate.js" is:inline></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- <script type="text/javascript">
+      (function () {
+        emailjs.init("xpnFy2CseDZ24U7pE");
+      })();
+
+      function sendEmail() {
+        event.preventDefault();
+
+        // Get form values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+
+        // Prepare email parameters
+        var params = {
+          name,
+          email,
+          subject,
+          message,
+        };
+
+        // Send email
+        emailjs.send("service_rlbk4h5", "template_f9mswtr", params).then(
+          function (response) {
+            console.log("SUCCESS", response);
+          },
+          function (error) {
+            console.log("FAILED", error);
+          }
+        );
+
+        // Clear form fields
+        // document.getElementsByClassName("php-email-form").reset();
+      }
+
+      document.getElementById("send-email").addEventListener("click", () => {
+        name = document.getElementById("name").value;
+        email = document.getElementById("email").value;
+        subject = document.getElementById("subject").value;
+        message = document.getElementById("message").value;
+
+        sendEmail();
+      });
+    </script> -->
+    <script src="assets/js/main.js" client:onLoad></script>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  :root {
+  }
+  html {
+  }
+  code {
+  }
 </style>
