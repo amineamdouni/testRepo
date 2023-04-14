@@ -6,13 +6,23 @@ import Clients from "../components/Clients.astro";
 import Features from "../components/Features.astro";
 import Services from "../components/Services.astro";
 import Contact from "../components/Contact.astro";
+import CTA from "../components/CTA.astro";
+import Counts from "../components/Counts.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Team from "../components/Team.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Hero />
+  <main id="main">
   <About />
   <Clients/>
   <Features/>
 <Services/>
-<Contact/>
+<CTA/>
+<Counts/>
+<Testimonials/>
+<Team/>
+
+<Contact/></main>
 </Layout>
