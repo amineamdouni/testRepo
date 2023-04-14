@@ -6,7 +6,8 @@ const Contact = () => {
   // const [email, setEmail] = useState("email");
   // const [subject, setSubject] = useState("subject");
   // const [message, setMessage] = useState("message");
-
+const Lang =
+  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
   const form = useRef();
 
   const sendEmail = (event) => {

@@ -6,10 +6,12 @@ export interface Props {
 const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
+
+
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={"eng"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -54,12 +56,16 @@ import NavBar from "../components/NavBar.astro";
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
-         <div id="preloader"></div>
+    <div id="preloader"></div>
 
-    <NavBar  />
+    <NavBar />
     <slot />
     <Footer />
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i></a
+    >
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js" is:inline
