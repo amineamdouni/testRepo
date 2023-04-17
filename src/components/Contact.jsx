@@ -1,17 +1,15 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  // const [name, setName] = useState("name");
-  // const [email, setEmail] = useState("email");
-  // const [subject, setSubject] = useState("subject");
-  // const [message, setMessage] = useState("message");
-
   const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const sendEmail = (event) => {
     event.preventDefault();
-
+    setIsSubmitting(true);
     emailjs
       .sendForm(
         "service_rlbk4h5",
@@ -19,21 +17,27 @@ const Contact = () => {
         form.current,
         "xpnFy2CseDZ24U7pE"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    // event.target.reset();
+      .then((result) => {
+        console.log(result.text);
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        event.target.reset();
+      })
+      .catch((error) => {
+        setIsSubmitting(false);
+        setSubmitError(true);
+        console.log(error.text);
+      });
   };
 
   return (
     <section id="contact" className="contact">
-      <form ref={form} className="container" data-aos="fade-up">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="container"
+        data-aos="fade-up"
+      >
         <div className="section-title">
           <h2>Contact</h2>
           <p>Contact Us</p>
@@ -120,14 +124,29 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="my-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">
+                {
+                  <div className={isSubmitting ? "loading d-block" : "loading"}>
+                    Loading
+                  </div>
+                }
+                <div
+                  className={
+                    submitError ? "error-message d-block" : "error-message"
+                  }
+                ></div>
+                <div
+                  className={
+                    submitSuccess ? "sent-message d-block" : "sent-message"
+                  }
+                >
                   Your message has been sent. Thank you!
                 </div>
               </div>
               <div className="text-center">
-                <button type="submit" onClick={(e) => sendEmail(e)}>
+                <button
+                  type="submit"
+                  // onClick={(e) => sendEmail(e)}
+                >
                   Send Message
                 </button>
               </div>
