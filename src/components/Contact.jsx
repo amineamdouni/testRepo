@@ -6,6 +6,8 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(null);
+  const Lang =
+    localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -39,8 +41,8 @@ const Contact = () => {
         data-aos="fade-up"
       >
         <div className="section-title">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>{Lang == "en" ? "Contact" : "Contact"}</h2>
+          <p>{Lang == "en" ? "Contact us" : "CONTACTEZ-NOUS"}</p>
         </div>
 
         <div>

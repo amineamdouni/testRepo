@@ -11,9 +11,11 @@ import CTA from "../components/CTA.astro";
 import Counts from "../components/Counts.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Team from "../components/Team.astro";
+//const Lang=localStorage.getItem('lang')|| 'en'
+const Lang = localStorage.getItem("Lang") || localStorage.setItem("Lang", "en");
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title='UniKode'>
   <Hero />
   <main id="main">
     <About />

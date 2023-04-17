@@ -1,53 +1,121 @@
 ---
-
+const Lang =
+  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
 ---
+
 <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
-          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-              <div class="row">
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> who have experienced the benefits of our solutions firsthand.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Projects</strong>delivering high-quality solutions that exceed their expectations. Our team of professionals takes a collaborative approach to every project, working closely with clients to understand their unique requirements and goals. </p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Years of experience</strong> as a team providing top-notch solutions to clients across various industries. Our team of experts brings a wealth of knowledge and expertise to every project, ensuring that our clients receive the best possible service. We're committed to staying up-to-date with the latest trends and technologies</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Awards</strong> for our outstanding solutions and services. These awards recognize our team's hard work, dedication, and commitment to excellence. Our track record of success speaks for itself, and we continue to strive for even greater achievements.</p>
-                  </div>
-                </div>
+  <div class="container" data-aos="fade-up">
+    <div class="row no-gutters">
+      <div
+        class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+      </div>
+      <div
+        class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      >
+        <div class="content d-flex flex-column justify-content-center">
+          <h3>
+            {
+              Lang == "en"
+                ? "Collaboration is the key to delivering high-quality solutions that exceed client expectations."
+                : "La collaboration est la clé pour fournir des solutions de haute qualité qui dépassent les attentes des clients."
+            }
+          </h3>
+          <p>
+            {
+              Lang == "en"
+                ? "Our team is dedicated to provide exceptional services to our clients We take a collaborative approach to every project, working closely with clients to understand their unique requirements and goals"
+                : "Notre équipe se consacre à fournir des services exceptionnels à nos clients. Nous adoptons une approche collaborative pour chaque projet, en travaillant en étroite collaboration avec les clients pour comprendre leurs exigences et leurs objectifs uniques."
+            }
+          </p>
+          <div class="row">
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="bi bi-emoji-smile"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="65"
+                  data-purecounter-duration="2"
+                  class="purecounter"></span>
+                <p>
+                  <strong
+                    >{
+                      Lang == "en"
+                        ? "Happy Clients "
+                        : "Des clients satisfaits "
+                    }</strong
+                  >{
+                    Lang == "en"
+                      ? "who have experienced the benefits of our solutions firsthand."
+                      : "qui ont fait l'expérience directe des avantages de nos solutions."
+                  }
+                </p>
               </div>
-            </div><!-- End .content-->
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="bi bi-journal-richtext"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="85"
+                  data-purecounter-duration="2"
+                  class="purecounter"></span>
+                <p>
+                  <strong>{Lang == "en" ? "Projects " : "Projets "}</strong>{
+                    Lang == "en"
+                      ? "delivering high-quality solutions that exceed their expectations. Our team of professionals takes a collaborative approach to every project, working closely with clients to understand their unique requirements and goals."
+                      : "en fournissant des solutions de haute qualité qui dépassent leurs attentes. Notre équipe de professionnels adopte une approche collaborative pour chaque projet, travaillant en étroite collaboration avec les clients pour comprendre leurs exigences et leurs objectifs uniques."
+                  }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="bi bi-clock"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="35"
+                  data-purecounter-duration="4"
+                  class="purecounter"></span>
+                <p>
+                  <strong
+                    >{Lang == "en" ? "Years of experience" : "Contact"}</strong
+                  >{
+                    Lang == "en"
+                      ? " as a team providing top-notch solutions to clients across various industries. Our team of experts brings a wealth of knowledge and expertise to every project, ensuring that our clients receive the best possible service. We're committed to staying up-to-date with the latest trends and technologies"
+                      : " en tant qu'équipe fournissant des solutions de premier ordre à des clients issus de divers secteurs d'activité. Notre équipe d'experts apporte une richesse de connaissances et d'expertise à chaque projet, garantissant à nos clients le meilleur service possible. Nous nous engageons à rester au fait des dernières tendances et technologies."
+                  }
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="bi bi-award"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="20"
+                  data-purecounter-duration="4"
+                  class="purecounter"></span>
+                <p>
+                  <strong>{Lang == "en" ? "Awards" : "Prix"}</strong>
+                  {
+                    Lang == "en"
+                      ? " for our outstanding solutions and services. These awards recognize our team's hard work, dedication, and commitment to excellence. Our track record of success speaks for itself, and we continue to strive for even greater achievements."
+                      : "pour nos solutions et services exceptionnels. Ces prix récompensent le travail acharné, le dévouement et l'engagement de notre équipe en faveur de l'excellence. Notre palmarès parle de lui-même et nous continuons à nous efforcer d'obtenir des résultats encore meilleurs."
+                  }
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
+  </div>
+</section>
