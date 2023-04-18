@@ -8,7 +8,7 @@ const Contact = () => {
   const [submitError, setSubmitError] = useState(null);
   const Lang =
     localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
-
+  console.log(form);
   const sendEmail = (event) => {
     event.preventDefault();
     setIsSubmitting(true);
@@ -23,7 +23,10 @@ const Contact = () => {
         console.log(result.text);
         setIsSubmitting(false);
         setSubmitSuccess(true);
-        event.target.reset();
+        setTimeout(() => {
+          setSubmitSuccess(false);
+          event.target.reset();
+        }, 2000);
       })
       .catch((error) => {
         setIsSubmitting(false);
@@ -126,31 +129,22 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="my-3">
-                {
-                  <div className={isSubmitting ? "loading d-block" : "loading"}>
+                {isSubmitting ? (
+                  <div className={isSubmitting ? "loading message" : "loading"}>
                     Loading
                   </div>
-                }
-                <div
-                  className={
-                    submitError ? "error-message d-block" : "error-message"
-                  }
-                ></div>
-                <div
-                  className={
-                    submitSuccess ? "sent-message d-block" : "sent-message"
-                  }
-                >
-                  Your message has been sent. Thank you!
-                </div>
+                ) : (
+                  <div
+                    className={
+                      submitSuccess ? "sent-message message" : "sent-message"
+                    }
+                  >
+                    Your message has been sent. Thank you!
+                  </div>
+                )}
               </div>
               <div className="text-center">
-                <button
-                  type="submit"
-                  // onClick={(e) => sendEmail(e)}
-                >
-                  Send Message
-                </button>
+                <button type="submit">Send Message</button>
               </div>
             </div>
           </div>
