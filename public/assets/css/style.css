@@ -9,6 +9,112 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+    .hi{padding: 100px;}
+  .my-list {
+    display: none; /* hide the list by default */
+  }
+  
+  .toggle-btn:focus + .my-list {
+    display: block; /* show the list when the button is focused */
+  }
+
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.language-switcher .current-language {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.language-switcher .current-language img {
+  margin-right: 5px;
+  width:30px;
+  height:20px
+}
+
+.language-switcher .language-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-switcher .language-list li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.language-switcher .language-list a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.language-switcher .language-list a img {
+  margin-right: 5px;
+  width:30px;
+  height:20px
+}
+
+.language-switcher .language-link:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.language-switcher.language-open .language-list {
+  display: block; 
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    position: static;
+  }
+  
+  .language-switcher .current-language {
+    margin-right: 0;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .language-switcher .language-list {
+    position: static;
+    display: none;
+    margin-top: 5px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .language-switcher .language-link:hover {
+    background-color: transparent;
+  }
+  
+  .language-switcher.language-open .language-list {
+    display: block;
+  }
+}
+
+
+
+
+
+
  /* @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"); */
  #hello h1 {
   color: #333;
@@ -1443,24 +1549,31 @@ section {
   font-weight: 600;
 }
 
+.sent-message.message,
+.loading.message {
+  opacity: 1 !important ;
+}
+
 .contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
 .contact .php-email-form .sent-message {
-  display: none;
   color: #fff;
   background: #18d26e;
   text-align: center;
   padding: 15px;
   font-weight: 600;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .contact .php-email-form .loading {
-  display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .contact .php-email-form .loading:before {
@@ -1473,6 +1586,7 @@ section {
   border: 3px solid #18d26e;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
+  transition: opacity 1s ease;
 }
 
 .contact .php-email-form input,

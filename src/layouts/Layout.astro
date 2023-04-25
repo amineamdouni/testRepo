@@ -76,58 +76,46 @@ import NavBar from "../components/NavBar.astro";
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" is:inline
     ></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js" is:inline></script>
-    <script src="assets/vendor/php-email-form/validate.js" is:inline></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
 
-    <!-- <script type="text/javascript">
-      (function () {
-        emailjs.init("xpnFy2CseDZ24U7pE");
-      })();
-
-      function sendEmail() {
-        event.preventDefault();
-
-        // Get form values
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var subject = document.getElementById("subject").value;
-        var message = document.getElementById("message").value;
-
-        // Prepare email parameters
-        var params = {
-          name,
-          email,
-          subject,
-          message,
-        };
-
-        // Send email
-        emailjs.send("service_rlbk4h5", "template_f9mswtr", params).then(
-          function (response) {
-            console.log("SUCCESS", response);
-          },
-          function (error) {
-            console.log("FAILED", error);
-          }
-        );
-
-        // Clear form fields
-        // document.getElementsByClassName("php-email-form").reset();
-      }
-
-      document.getElementById("send-email").addEventListener("click", () => {
-        name = document.getElementById("name").value;
-        email = document.getElementById("email").value;
-        subject = document.getElementById("subject").value;
-        message = document.getElementById("message").value;
-
-        sendEmail();
-      });
-    </script> -->
     <script src="assets/js/main.js" client:onLoad></script>
+    <script client:onLoad>
+
+const currentLang = document.querySelector('.current-language');
+console.log(currentLang,'hi');
+const langList = document.querySelector('.language-list');
+// const langLinks = document.getElementById('language-link1');
+// console.log(langLinks);
+// langLinks.addEventListener('click', () => {
+//   console.log('hi')
+//   // event.preventDefault();
+
+// });
+
+
+// langLinks.forEach(langLink => {
+  
+//   langLink.addEventListener('click', (event) => {
+//     console.log('hih')
+//     event.preventDefault();
+//     currentLang.innerHTML = langLink.innerHTML;
+//     langList.classList.toggle('show');
+//   });
+// });
+
+
+
+const toggleBtn = document.getElementById('toggleBtn');
+const myList = document.getElementById('myList');
+
+toggleBtn.addEventListener('click', () => {
+  myList.classList.toggle('show');
+});
+
+    </script>
   </body>
 </html>
 <style is:global>

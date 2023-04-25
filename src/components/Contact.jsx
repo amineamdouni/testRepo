@@ -1,18 +1,17 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  // const [name, setName] = useState("name");
-  // const [email, setEmail] = useState("email");
-  // const [subject, setSubject] = useState("subject");
-  // const [message, setMessage] = useState("message");
-const Lang =
-  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
   const form = useRef();
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+  const Lang =
+    localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
+  console.log(form);
   const sendEmail = (event) => {
     event.preventDefault();
-
+    setIsSubmitting(true);
     emailjs
       .sendForm(
         "service_rlbk4h5",
@@ -20,21 +19,30 @@ const Lang =
         form.current,
         "xpnFy2CseDZ24U7pE"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    // event.target.reset();
+      .then((result) => {
+        console.log(result.text);
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setTimeout(() => {
+          setSubmitSuccess(false);
+          event.target.reset();
+        }, 2000);
+      })
+      .catch((error) => {
+        setIsSubmitting(false);
+        setSubmitError(true);
+        console.log(error.text);
+      });
   };
 
   return (
     <section id="contact" className="contact">
-      <form ref={form} className="container" data-aos="fade-up">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="container"
+        data-aos="fade-up"
+      >
         <div className="section-title">
           <h2>{Lang == "en" ? "Contact" : "Contact"}</h2>
           <p>{Lang == "en" ? "Contact us" : "CONTACTEZ-NOUS"}</p>
@@ -121,16 +129,22 @@ const Lang =
                 ></textarea>
               </div>
               <div className="my-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
+                {isSubmitting ? (
+                  <div className={isSubmitting ? "loading message" : "loading"}>
+                    Loading
+                  </div>
+                ) : (
+                  <div
+                    className={
+                      submitSuccess ? "sent-message message" : "sent-message"
+                    }
+                  >
+                    Your message has been sent. Thank you!
+                  </div>
+                )}
               </div>
               <div className="text-center">
-                <button type="submit" onClick={(e) => sendEmail(e)}>
-                  Send Message
-                </button>
+                <button type="submit">Send Message</button>
               </div>
             </div>
           </div>

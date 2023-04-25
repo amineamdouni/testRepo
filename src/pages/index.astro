@@ -15,7 +15,7 @@ import Team from "../components/Team.astro";
 const Lang = localStorage.getItem("Lang") || localStorage.setItem("Lang", "en");
 ---
 
-<Layout title='UniKode'>
+<Layout title="UniKode">
   <Hero />
   <main id="main">
     <About />
@@ -27,6 +27,6 @@ const Lang = localStorage.getItem("Lang") || localStorage.setItem("Lang", "en");
     <Testimonials />
     <Team />
 
-    <Contact client:load />
+    <Contact client:only />
   </main>
 </Layout>
