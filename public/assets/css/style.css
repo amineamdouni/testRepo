@@ -10,6 +10,8 @@
 # General
 --------------------------------------------------------------*/
 
+
+
     .hi{padding: 100px;}
   .my-list {
     display: none; /* hide the list by default */
@@ -1699,10 +1701,12 @@ section {
   background: #151515;
   border-bottom: 1px solid #222222;
   padding: 60px 0 30px 0;
+  
 }
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  margin-left : 150px
 }
 
 #footer .footer-top .footer-info h3 {

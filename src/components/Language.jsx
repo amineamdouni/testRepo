@@ -18,11 +18,11 @@ console.log('fffff');
   return (
   
     <div className="language-switcher">
-        <button onClick={()=>{
+        {/* <button onClick={()=>{
         console.log('hi');
         setCurrentLanguage('english')
         setCurrentLanguageFlag('https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg')
-      }}>hi</button>
+      }}>hi</button> */}
     <a href="#" className="current-language toggle-btn" id="toggleBtn">
       <img src={currentLanguageFlag} alt="English flag"/>
       {currentLanguage}
