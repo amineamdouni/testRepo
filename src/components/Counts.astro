@@ -1,6 +1,5 @@
 ---
-const Lang =
-  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
+const { Lang } = Astro.props;
 ---
 
 <section id="counts" class="counts">
