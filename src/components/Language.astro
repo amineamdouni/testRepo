@@ -1,0 +1,27 @@
+---
+const { currentLanguage, currentLanguageFlag } = Astro.props;
+---
+
+<div class="language-switcher">
+  {
+    currentLanguage === "en" ? (
+      <a href="fr" class="current-language toggle-btn" id="toggleBtn">
+        <img
+          src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg"
+          alt="English flag"
+        />
+        English
+        <i class="fas fa-angle-down" />
+      </a>
+    ) : (
+      <a href="en" class="current-language toggle-btn" id="toggleBtn">
+        <img
+          src="https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg"
+          alt="English flag"
+        />
+        Français
+        <i class="fas fa-angle-down" />
+      </a>
+    )
+  }
+</div>
