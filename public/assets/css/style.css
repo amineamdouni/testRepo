@@ -10,6 +10,20 @@
 # General
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
+=======
+
+
+    .hi{padding: 100px;}
+  .my-list {
+    display: none; /* hide the list by default */
+  }
+  
+  .toggle-btn:focus + .my-list {
+    display: block; /* show the list when the button is focused */
+  }
+
+>>>>>>> 816360211ff2b748c0fdd01a3ff91248463a7551
 
 .language-switcher {
   display: flex;
@@ -1690,10 +1704,12 @@ section {
   background: #151515;
   border-bottom: 1px solid #222222;
   padding: 60px 0 30px 0;
+  
 }
 
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
+  margin-left : 150px
 }
 
 #footer .footer-top .footer-info h3 {
