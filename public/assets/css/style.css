@@ -10,15 +10,6 @@
 # General
 --------------------------------------------------------------*/
 
-    .hi{padding: 100px;}
-  .my-list {
-    display: none; /* hide the list by default */
-  }
-  
-  .toggle-btn:focus + .my-list {
-    display: block; /* show the list when the button is focused */
-  }
-
 
 .language-switcher {
   display: flex;
@@ -221,7 +212,7 @@
     text-indent: 0;
   }
 }
-{.waviy h2 {
+.waviy h2 {
   color: #fff;
   /* font-size: 50px; */
   position: absolute;
@@ -267,7 +258,7 @@
       0% 100%
     );
   }
-}} 
+}
 .waviy {
   position: relative;
 }

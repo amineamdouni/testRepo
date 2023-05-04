@@ -1,9 +1,11 @@
 ---
 export interface Props {
   title: string;
+  Lang: string;
 }
 
-const { title } = Astro.props;
+const { title, Lang } = Astro.props;
+
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
 ---
@@ -56,9 +58,9 @@ import NavBar from "../components/NavBar.astro";
   <body>
     <div id="preloader"></div>
 
-    <NavBar />
+    <NavBar Lang={Lang} />
     <slot />
-    <Footer />
+    <Footer Lang={Lang} />
     <a
       href="#"
       class="back-to-top d-flex align-items-center justify-content-center"
@@ -82,47 +84,5 @@ import NavBar from "../components/NavBar.astro";
     ></script>
 
     <script src="assets/js/main.js" client:onLoad></script>
-    <script client:onLoad>
-
-const currentLang = document.querySelector('.current-language');
-console.log(currentLang,'hi');
-const langList = document.querySelector('.language-list');
-// const langLinks = document.getElementById('language-link1');
-// console.log(langLinks);
-// langLinks.addEventListener('click', () => {
-//   console.log('hi')
-//   // event.preventDefault();
-
-// });
-
-
-// langLinks.forEach(langLink => {
-  
-//   langLink.addEventListener('click', (event) => {
-//     console.log('hih')
-//     event.preventDefault();
-//     currentLang.innerHTML = langLink.innerHTML;
-//     langList.classList.toggle('show');
-//   });
-// });
-
-
-
-const toggleBtn = document.getElementById('toggleBtn');
-const myList = document.getElementById('myList');
-
-toggleBtn.addEventListener('click', () => {
-  myList.classList.toggle('show');
-});
-
-    </script>
   </body>
 </html>
-<style is:global>
-  :root {
-  }
-  html {
-  }
-  code {
-  }
-</style>
