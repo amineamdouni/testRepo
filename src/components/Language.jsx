@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Language = () => {
   const [isLanguageListShown, setIsLanguageListShown] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('English');
+  const [currentLanguage, setCurrentLanguage] = useState('');
   const [currentLanguageFlag, setCurrentLanguageFlag] = useState('https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg');
 
 //   function handleCurrentLanguageClick() {
@@ -24,28 +24,29 @@ console.log('fffff');
         setCurrentLanguageFlag('https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg')
       }}>hi</button> */}
     <a href="#" className="current-language toggle-btn" id="toggleBtn">
-      <img src={currentLanguageFlag} alt="English flag"/>
+      <img src={currentLanguageFlag} alt="English flag"  onClick={()=>{
+        console.log('hi');
+
+        // setCurrentLanguage('francais')
+        setCurrentLanguageFlag('https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg')
+      }} />
       {currentLanguage}
       <i className="fas fa-angle-down"></i>
     </a> 
   
   
     <ul className="my-list language-list" id="myList">
-      <li >
+     
+      {/* <li >
         <a href="#" id="language-link1" data-lang="fr">
           <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" alt="French flag"/>
           english
         </a>
-      </li>
-      <li onClick={()=>{
-        console.log('hi');
-
-        setCurrentLanguage('francais')
-        setCurrentLanguageFlag('https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg')
-      }}>
+      </li> */}
+      <li >
         <a href="#" className="language-link2" data-lang="fr">
-          <img src="https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg" alt="French flag"/>
-          Français
+          <img src="https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg" alt="French flag"    />
+         
         </a>
       </li>
     </ul>
