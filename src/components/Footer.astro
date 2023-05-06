@@ -1,8 +1,7 @@
 ---
-const Lang =
-  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
-
+const { Lang } = Astro.props;
 ---
+
 <footer id="footer">
     <div class="footer-top">
       <div class="container">
@@ -68,6 +67,7 @@ const Lang =
 
       
     </div>
+  </div>
 
     <div class="container">
       <div class="copyright">
@@ -75,4 +75,5 @@ const Lang =
       </div>
       
     </div>
-  </footer>
+  </div>
+</footer>

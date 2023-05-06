@@ -10,6 +10,8 @@
 # General
 --------------------------------------------------------------*/
 
+<<<<<<< HEAD
+=======
 
 
     .hi{padding: 100px;}
@@ -21,6 +23,7 @@
     display: block; /* show the list when the button is focused */
   }
 
+>>>>>>> 816360211ff2b748c0fdd01a3ff91248463a7551
 
 .language-switcher {
   display: flex;
@@ -223,7 +226,7 @@
     text-indent: 0;
   }
 }
-{.waviy h2 {
+.waviy h2 {
   color: #fff;
   /* font-size: 50px; */
   position: absolute;
@@ -269,7 +272,7 @@
       0% 100%
     );
   }
-}} 
+}
 .waviy {
   position: relative;
 }

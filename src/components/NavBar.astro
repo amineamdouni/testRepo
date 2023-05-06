@@ -1,19 +1,9 @@
 ---
-import Language from "./Language.jsx";
-const Lang =
-  localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
-
+import Language from "./Language.astro";
+const { Lang } = Astro.props;
+console.log(Lang);
 ---
-<style>
-  .hi{padding: 100px;}
-.my-list {
-  display: none; /* hide the list by default */
-}
 
-.toggle-btn:focus + .my-list {
-  display: block; /* show the list when the button is focused */
-}
-</style>
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center justify-content-lg-between">
     <h1 class=""><a href="index.html">UniKode<span>.</span></a></h1>
@@ -24,31 +14,41 @@ const Lang =
       <ul>
         <li>
           <a class="nav-link scrollto active" href="#hero"
-            >{Lang == "en" ? "Home" : "Accueil"}</a>
+            >{Lang == "en" ? "Home" : "Accueil"}</a
+          >
         </li>
         <li>
           <a class="nav-link scrollto" href="#about"
-            >{Lang == "en" ? "About" : "Qui sommes-nous"}</a>
+            >{Lang == "en" ? "About" : "Qui sommes-nous"}</a
+          >
         </li>
         <li>
           <a class="nav-link scrollto" href="#services"
-            >{Lang == "en" ? "Services" : "Services"}</a>
+            >{Lang == "en" ? "Services" : "Services"}</a
+          >
         </li>
-       
+        <li>
+          <a class="nav-link scrollto" href="#portfolio"
+            >{Lang == "en" ? "Portfolio" : "portefeuille"}</a
+          >
+        </li>
         <li>
           <a class="nav-link scrollto" href="#team"
-            >{Lang == "en" ? "Team" : "Equipe"}</a>
+            >{Lang == "en" ? "Team" : "Equipe"}</a
+          >
         </li>
         <li>
           <a class="nav-link scrollto" href="#contact"
-            >{Lang == "en" ? "Contact" : "Contact"}</a>
+            >{Lang == "en" ? "Contact" : "Contact"}</a
+          >
         </li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
+    </nav>
 
-   
-      <Language client:load/>
-  
+    <Language
+      currentLanguage={Lang}
+      currentLanguageFlag={"https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg"}
+    />
   </div>
 </header>
