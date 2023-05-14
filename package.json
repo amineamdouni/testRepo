@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^2.1.1",
-    "astro": "^2.3.0",
+    "@astrojs/vercel": "^3.3.0",
+    "astro": "^2.4.5",
     "emailjs-com": "^3.2.0"
   }
 }
