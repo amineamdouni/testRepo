@@ -14,10 +14,10 @@ const Contact = () => {
     setIsSubmitting(true);
     emailjs
       .sendForm(
-        "service_rlbk4h5",
-        "template_f9mswtr",
+        "service_gzymsr9",
+        "template_i2qclj2",
         form.current,
-        "xpnFy2CseDZ24U7pE"
+        "Zl7LdPBWd6gaKtvwD"
       )
       .then((result) => {
         console.log(result.text);
@@ -51,9 +51,9 @@ const Contact = () => {
         <div>
           <iframe
             style={{ border: "0", width: "100%", height: "270px" }}
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-            frameBorder="0"
-            allowFullScreen
+            frameborder="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.276295678394!2d10.260340066110018!3d36.85007723193009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13f7b91ed3f75d93%3A0xf5ec14b05853b8d7!2sYour%20Location!5e0!3m2!1sen!2sus!4v1651206455755!5m2!1sen!2sus&q=36.85007723193009%2C%2010.260340066110018%20(My%20Location)"
+            allowfullscreen
           ></iframe>
         </div>
 
@@ -63,19 +63,19 @@ const Contact = () => {
               <div className="address">
                 <i className="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Les Brges du Lac 1 </p>
               </div>
 
               <div className="email">
                 <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>unikodecc77@gmail.com</p>
               </div>
 
               <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+216 52 665 998</p>
               </div>
             </div>
           </div>
