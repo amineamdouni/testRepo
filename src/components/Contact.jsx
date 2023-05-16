@@ -14,10 +14,10 @@ const Contact = () => {
     setIsSubmitting(true);
     emailjs
       .sendForm(
-        "service_gzymsr9",
-        "template_i2qclj2",
+        "service_08stomk",
+        "template_hl808il",
         form.current,
-        "Zl7LdPBWd6gaKtvwD"
+        "S7GrO1eNdTpr8vjmY"
       )
       .then((result) => {
         console.log(result.text);
@@ -69,13 +69,13 @@ const Contact = () => {
               <div className="email">
                 <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>unikodecc77@gmail.com</p>
+                <p>contact@unikode.net</p>
               </div>
 
               <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+216 52 665 998</p>
+                <p> +16469188190</p>
               </div>
             </div>
           </div>
