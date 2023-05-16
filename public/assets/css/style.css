@@ -10,8 +10,7 @@
 # General
 --------------------------------------------------------------*/
 
-<<<<<<< HEAD
-=======
+
 
 
     .hi{padding: 100px;}
@@ -23,9 +22,9 @@
     display: block; /* show the list when the button is focused */
   }
 
->>>>>>> 816360211ff2b748c0fdd01a3ff91248463a7551
 
-.language-switcher {
+
+  .language-switcher {
   display: flex;
   align-items: center;
   position: relative;
@@ -90,13 +89,13 @@
   .language-switcher {
     position: static;
   }
-  
+
   .language-switcher .current-language {
     margin-right: 0;
     padding-right: 10px;
     border-right: 1px solid #ddd;
   }
-  
+
   .language-switcher .language-list {
     position: static;
     display: none;
@@ -105,17 +104,15 @@
     border: none;
     box-shadow: none;
   }
-  
+
   .language-switcher .language-link:hover {
     background-color: transparent;
   }
-  
+
   .language-switcher.language-open .language-list {
     display: block;
   }
 }
-
-
 
 
 
@@ -395,6 +392,36 @@ h6 {
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+  .language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* added for responsiveness */
+  }
+  
+  .language-switcher a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .language-switcher a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .language-switcher a {
+      padding: 5px;
+    }
+    
+    .language-switcher a img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
   }
 }
 
