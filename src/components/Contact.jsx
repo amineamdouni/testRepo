@@ -8,7 +8,6 @@ const Contact = () => {
   const [submitError, setSubmitError] = useState(null);
   const Lang =
     localStorage.getItem("Lang") || localStorage.setItem("Lang", "eng");
-  console.log(form);
   const sendEmail = (event) => {
     event.preventDefault();
     setIsSubmitting(true);
