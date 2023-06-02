@@ -30,8 +30,7 @@ const { Lang } = Astro.props;
             </p>
           </div>
         </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
+<div class="swiper-slide">
           <div class="testimonial-item">
             <img
               src="assets/img/team/abderrahim.jpg"
@@ -39,6 +38,26 @@ const { Lang } = Astro.props;
               alt=""
             />
             <h3>Abderrahim Ouertani</h3>
+          
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              {
+                Lang == "en"
+                  ? "The front end is the gateway to an app's success, as it serves as the visual and interactive interface that captivates users, enabling seamless navigation, delightful experiences, and ultimately shaping their perception and engagement with the application."
+                  : "La partie frontale est la porte d'entrée du succès d'une application, car elle sert d'interface visuelle et interactive qui captive les utilisateurs, permettant une navigation transparente et des expériences agréables, et façonnant finalement leur perception et leur engagement vis-à-vis de l'application."
+              }
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img
+              src="assets/img/team/aziz.jpg"
+              class="testimonial-img"
+              alt=""
+            />
+            <h3>Med Aziz Selini</h3>
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
               {
@@ -94,7 +113,7 @@ const { Lang } = Astro.props;
         <div class="swiper-slide">
           <div class="testimonial-item">
             <img
-              src="assets/img/team/mehdi.png"
+              src="assets/img/team/mehdi.jpg"
               class="testimonial-img"
               alt=""
             />
